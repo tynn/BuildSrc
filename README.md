@@ -9,6 +9,24 @@ BuildSrc
 Usage
 -----
 
+### [Monkey]
+
+Run a monkey on the single connected emulator.
+
+    $ ./gradlew monkey
+
+*build.gradle*
+
+    apply plugin: 'berlin.volders.monkey'
+    monkey {
+        dependsOn 'installDebug'
+        count 15000
+        ignoreNativeCrashes true
+    }
+
+Defining a dependency to an Android install task also appropriately sets up the
+package filter for the *monkey*.
+
 
 Installation
 ------------
@@ -43,6 +61,7 @@ License
     limitations under the License.
 
 
+  [Monkey]: https://developer.android.com/studio/test/monkey.html
   [1]: https://travis-ci.org/volders/BuildSrc.svg?branch=master
   [2]: https://travis-ci.org/volders/BuildSrc
   [3]: https://jitpack.io/v/berlin.volders/buildSrc.svg
