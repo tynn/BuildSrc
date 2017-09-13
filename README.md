@@ -38,7 +38,7 @@ Add [JitPack][4] to your build repositories and *BuildSrc* to the classpath
             maven { url 'https://jitpack.io' }
         }
         dependencies {
-            classpath "berlin.volders:buildSrc:$buildSrcVersion"
+            classpath "com.github.v2rc:buildsrc:$buildSrcVersion"
         }
     }
 
@@ -62,7 +62,7 @@ License
 
 
   [Monkey]: https://developer.android.com/studio/test/monkey.html
-  [1]: https://travis-ci.org/volders/BuildSrc.svg?branch=master
-  [2]: https://travis-ci.org/volders/BuildSrc
-  [3]: https://jitpack.io/v/berlin.volders/buildSrc.svg
-  [4]: https://jitpack.io/#berlin.volders/buildSrc
+  [1]: https://travis-ci.org/v2rc/BuildSrc.svg?branch=master
+  [2]: https://travis-ci.org/v2rc/BuildSrc
+  [3]: https://jitpack.io/v/v2rc/buildsrc.svg
+  [4]: https://jitpack.io/#v2rc/buildsrc
