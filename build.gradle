@@ -1,10 +1,11 @@
+allprojects {
+    apply plugin: 'jacoco'
+    repositories { mavenCentral() }
+}
+
 subprojects {
     apply plugin: 'groovy'
     apply plugin: 'maven'
-
-    repositories {
-        mavenCentral()
-    }
 
     dependencies {
         compile gradleApi()
@@ -18,8 +19,21 @@ subprojects {
         from sourceSets.main.allSource
     }
 
-    artifacts {
-        archives sourcesJar
+    artifacts { archives sourcesJar }
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    dependsOn { subprojects*.test }
+    executionData fileTree(project.rootDir.absolutePath)
+                    .include("**/build/jacoco/*.exec")
+
+    subprojects.each { sourceSets it.sourceSets.main }
+
+    reports {
+        html.enabled false
+        csv.enabled false
+        xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
     }
 }
 

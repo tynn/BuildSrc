@@ -2,6 +2,7 @@ BuildSrc
 ========
 [![Build][1]][2]
 [![Release][3]][4]
+[![Coverage][5]][6]
 
 *BuildSrc* is a collection of Gradle plugins for Android development.
 
@@ -66,3 +67,5 @@ License
   [2]: https://travis-ci.org/v2rc/BuildSrc
   [3]: https://jitpack.io/v/v2rc/buildsrc.svg
   [4]: https://jitpack.io/#v2rc/buildsrc
+  [5]: https://codecov.io/gh/v2rc/BuildSrc/branch/master/graph/badge.svg
+  [6]: https://codecov.io/gh/v2rc/BuildSrc
